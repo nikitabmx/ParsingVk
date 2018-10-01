@@ -84,10 +84,11 @@ public class ThreadForDB extends Thread {
 
 
 
-             // фильтруем записи без текста
              Arrays.stream(arr.toArray())
 
+                     // фильтруем записи без текста
                      .filter(o ->((JSONObject) o).get("Post text") != "" )
+                     // кидаем в функцию   выражение бд, айди,  текст записи
                      .forEach(o -> SetStringer(psText, (String) ((JSONObject) o).get("Post link"), (String) ((JSONObject) o).get("Post text"))   );
 
 

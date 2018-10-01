@@ -1,5 +1,4 @@
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,9 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
-import java.util.Arrays;
 import java.util.logging.Logger;
 
 public class Main {
@@ -36,7 +37,7 @@ public class Main {
     private final static String password = "";
     private final static String url =
             "jdbc:mysql://localhost:3306/seleniumtest?useUnicode=true&characterEncoding=UTF8";
-    //инициализируем и запускаем потоки
+
     private static ThreadForLinks link_thread;
     private static ThreadForPics pics_thread;
     private static ThreadForTexts text_thread;
@@ -78,20 +79,7 @@ public class Main {
         Read();
         ClearFile();
 
-//        int j = 0;
-//        By myElem = By.className("author");
-//        for (int i = 1; i < 1000; i++) {
-//            List<WebElement> myElements = driver.findElements(myElem);
-//
-//            for (WebElement e : myElements) {
-//                e.sendKeys(Keys.ARROW_DOWN);
-//
-//                j++;
-//                //  e.sendKeys(Keys.ARROW_DOWN);
-//                System.out.print("Имя источника: " + e.getText() + "\n " + j);
-//            }
-//
-//        }
+
         new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.tagName("a")));
         try {
 
@@ -132,7 +120,7 @@ public class Main {
             pics_thread.start();
             text_thread.start();
 
-            //ставим их в ....?????
+            //ставим их в " ожидание"
             try {
                 link_thread.join();
                 pics_thread.join();
@@ -140,7 +128,7 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
+//делаем их демонами
             file_thread.setDaemon(true);
             file_thread.start();
             db_thread.setDaemon(true);
