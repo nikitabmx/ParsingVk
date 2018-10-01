@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="org.seleniumhq.selenium:selenium-firefox-driver:2.8.0" type="repository">
+    <properties maven-id="org.seleniumhq.selenium:selenium-firefox-driver:2.8.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/2.8.0/selenium-firefox-driver-2.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.8.0/selenium-remote-driver-2.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20080701/json-20080701.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.8.0/selenium-api-2.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/r09/guava-r09.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.1.2/httpclient-4.1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.1.2/httpcore-4.1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.4/commons-codec-1.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
